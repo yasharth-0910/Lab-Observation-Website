@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
-    background-image: url('../assests/rob.jpg');
+    background-image: url('../assests/contact-form-bg.jpeg');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 form {
-    background-color: rgba(129, 169, 221, 0.489); /* Set the alpha value as needed */
+    background-color: rgba(225, 255, 174, 0.489); /* Set the alpha value as needed */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ form {
 }
 
 form:hover {
-    background-color: rgba(129, 169, 221, 0.8); /* Adjust the alpha value for the hover state */
+    background-color: rgba(212, 235, 58, 0.8); /* Adjust the alpha value for the hover state */
 }
 
 @keyframes fadeIn {
