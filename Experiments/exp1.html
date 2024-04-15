@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+    <link rel="stylesheet" href="exp1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+    <link rel="icon" href="../assests/einstien.png" type="icon">
+
+
+</head>
+<body>
+   <div class="exp1">
+        <h1>Experiment 1</h1>
+
+        <b><p>Aim:</p></b><p>To determine the band gap in a semiconductor using its p-n junction diode.</p>
+        <b><p>Apparatus required: </p></b><p>p-n junction diode kit, electrical oven, and thermometer.</p>
+        <b><p>Formula Used:</p></b><p>The reverse biased current Is (saturated value) is the function of
+            temperature (T) of the junction diode. For a small range of temperature, the relation is
+            expressed as,
+            <br>
+            <b>
+             Log10 Is = constant – 5.036 ΔE (10^3/T)
+            </b>
+            <br>
+            where, temperature T is in Kelvin, ΔE is the band gap in electron volts (eV).
+        </p>
+        <b><p>Theory: </p></b><p>In a semiconductor, there is an energy gap between its conduction and valence band. For
+            the conduction of electricity a certain amount of energy is to be given to the electron so
+            that it goes from the valence band to the conduction band. The energy so needed is the
+            measure of the energy gap (ΔE) between two bands. When PN junction is placed in
+            reverse bias, the current flows through the junction due to minority charge carriers. The
+            concentration of these charge carriers depends on band gap (∆E). The saturation value of
+            reverse current (Is) depends on the temperature of junction diode and it is given by
+            equation,</p>
+            <img style="display: flex; text-align: center;" src="./exp1=img/image.png" alt="">
+            <p>where, k=1.38 x 10-23 J/K is Boltzman’s constant and T is absolute temperature of
+                junction.
+                Taking log of both sides of above equation, 
+            </p>
+            <img src="./exp1=img/eqn.png" alt="">
+            <p>where C is a constant which is equal to the first term of RHS of above equation (for small
+                changes in temperature, log T can be treated as constant). On substituting the value of k
+                and converting the unit of ΔE , we get 
+            </p>
+            <img src="./exp1=img/eqn3.png" alt="">
+            <p>This represents a straight line (y=mx+c) having a negative slope (5.036 ΔE ). Therefore,
+                by knowing the slope of the line, ΔE can be determined through following formula
+            </p>
+            <img src="./exp1=img/eqn4.png" alt="">
+
+            <b><p>Procedure: </p></b><p><ol>
+                <ol>
+                    <li>Plug the mains lead to the nearest mains socket carrying 230V at 50 Hz A.C.</li>
+                    <li>Fix a thermometer on p-n junction kit to measure the temperature.</li>
+                    <li>Keep the temperature switch at OFF position.</li>
+                    <li>Switch ON the instrument using ON/OFF toggle switch provided on front panel.</li>
+                    <li>Adjust the voltage (e.g. 5Volt) and note down the reverse current.</li>
+                    <li>Select the temperature control switch at ON position. Temperature starts increasing and the reading of micrometer also starts increasing.</li>
+                    <li>As temperature reaches about 78°C, switch off the oven. The temperature will rise further, say about 80°C and will become stable for Ge diode. Note down the maximum reading shown by the micro ammeter (μA).</li>
+                    <li>Now temperature will begin to fall. Take values of current (in μA) in the interval of 2°C.</li>
+                    <li>Plot a graph between Log10 Is and (10^3/T) and find the slope.</li>
+                </ol>
+            </ol></p>
+
+            <b><p>Observations:</p></b>
+            <p>Enter the values of I's for the specified temperatures:</p>
+            <form id="currentForm">
+                <label for="current348">Current (I's) at 348K:</label>
+                <input type="number" id="current348" required placeholder="Enter the value of I's"><br><br>
+
+                <label for="current343">Current (I's) at 343K:</label>
+                <input type="number" id="current343" required placeholder="Enter the value of I's"><br><br>
+
+                <label for="current338">Current (I's) at 338K:</label>
+                <input type="number" id="current338" required placeholder="Enter the value of I's"><br><br>
+
+                <label for="current333">Current (I's) at 333K:</label>
+                <input type="number" id="current333" required placeholder="Enter the value of I's"><br><br>
+
+                <label for="current328">Current (I's) at 328K:</label>
+                <input type="number" id="current328" placeholder="Enter the value of I's"><br><br>
+
+                <label for="current323">Current (I's) at 323K:</label>
+                <input type="number" id="current323" placeholder="Enter the value of I's"><br><br>
+
+                <label for="current318">Current (I's) at 318K:</label>
+                <input type="number" id="current318" placeholder="Enter the value of I's"><br><br>
+
+                <label for="current313">Current (I's) at 313K:</label>
+                <input type="number" id="current313" placeholder="Enter the value of I's"><br><br>
+
+                <label for="current308">Current (I's) at 308K:</label>
+                <input type="number" id="current308" placeholder="Enter the value of I's"><br><br>
+
+                <label for="current303">Current (I's) at 303K:</label>
+                <input type="number" id="current303" placeholder="Enter the value of I's"><br><br>
+
+                <button type="button" onclick="calculateBandGap()" style="padding: 5px; border-radius: 5px;">Calculate Band Gap</button>
+        </form>
+        <div id="bandGapResult"></div>
+        <div id="percentError"></div>
+        <canvas id="graph" width="400" height="400"></canvas> 
+        <button type="button" onclick="window.print()" style="padding: 5px; border-radius: 5px; margin-top: 10px;">Print Graph</button>
+
+   </div>
+</body>
+</html> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <link rel="icon" href="../assests/einstein.png" type="icon">
+</head>
+<body>
+    <h1>Experiment-2</h1>
+    <b><p>Observations: </p></b>
+    <p>Enter the value of Vo for the following colors:</p>
+    <form id="colorForm">
+        <label for="red">Red:</label>
+        <input type="number" id="red" required placeholder="Enter Vo for red color"><br><br>
+
+        <label for="yellow">Yellow:</label>
+        <input type="number" id="yellow" required placeholder="Enter Vo for yellow color"><br><br>
+
+        <label for="green">Green:</label>
+        <input type="number" id="green" required placeholder="Enter Vo for green color"><br><br>
+
+        <label for="blue">Blue:</label>
+        <input type="number" id="blue" required placeholder="Enter Vo for blue color"><br><br>
+
+        <button type="button" onclick="submitValues()" style="padding: 5px; border-radius: 5px;">Calculate</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        function submitValues() {
+            // Get the input values for Vo
+            const redValue = parseFloat(document.getElementById("red").value);
+            const yellowValue = parseFloat(document.getElementById("yellow").value);
+            const greenValue = parseFloat(document.getElementById("green").value);
+            const blueValue = parseFloat(document.getElementById("blue").value);
+
+            // Constants
+            const e = 1.6 * Math.pow(10, -19); // Elementary charge in Coulombs
+            const c = 3 * Math.pow(10, 8); // Speed of light in m/s
+            const correctH = 6.626 * Math.pow(10, -34); // Correct value of Planck's constant
+
+            // Wavelengths in meters
+            const redWavelength = 660 * Math.pow(10, -9);
+            const yellowWavelength = 610 * Math.pow(10, -9);
+            const greenWavelength = 525 * Math.pow(10, -9);
+            const blueWavelength = 450 * Math.pow(10, -9);
+
+            // Frequencies in Hz
+            const redFrequency = 4.5 * Math.pow(10, 14);
+            const yellowFrequency = 4.9 * Math.pow(10, 14);
+            const greenFrequency = 5.7 * Math.pow(10, 14);
+            const blueFrequency = 6.6 * Math.pow(10, 14);
+
+            // Calculate energy (E) for each color
+            const redE = e * redValue;
+            const yellowE = e * yellowValue;
+            const greenE = e * greenValue;
+            const blueE = e * blueValue;
+
+            // Calculate Planck's constant (h) for each color
+            const redH = (redE * redWavelength) / c;
+            const yellowH = (yellowE * yellowWavelength) / c;
+            const greenH = (greenE * greenWavelength) / c;
+            const blueH = (blueE * blueWavelength) / c;
+
+            // Calculate the net Planck's constant (h_net)
+            const hNet = (redH + yellowH + greenH + blueH) / 4;
+
+            // Calculate the errors
+            const redError = Math.abs(redH - correctH);
+            const yellowError = Math.abs(yellowH - correctH);
+            const greenError = Math.abs(greenH - correctH);
+            const blueError = Math.abs(blueH - correctH);
+            const hNetError = Math.abs(correctH - hNet);
+
+            // Display results
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = `
+                <p>Energy (E) and Planck's constant (h) for each color:</p>
+                <ul>
+                    <li>Red: E = ${redE.toExponential(2)} J, h = ${redH.toExponential(2)} Js, </li>
+                    <li>Yellow: E = ${yellowE.toExponential(2)} J, h = ${yellowH.toExponential(2)} Js, </li>
+                    <li>Green: E = ${greenE.toExponential(2)} J, h = ${greenH.toExponential(2)} Js, </li>
+                    <li>Blue: E = ${blueE.toExponential(2)} J, h = ${blueH.toExponential(2)} Js, </li>
+                </ul>
+                <p>Net Planck's constant (h_net): ${hNet.toExponential(2)} Js, Error = ${hNetError.toExponential(2)} %</p>
+            `;
+        }
+    </script>
+</body>
+</html>
