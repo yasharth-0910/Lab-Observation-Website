@@ -15,7 +15,7 @@ function calculateBandGap() {
 
     document.getElementById("bandGapResult").innerText = `Band Gap: ${bandGap.toFixed(2)} eV`;
     const theoreticalBandGap = 0.7;
-    const percentError = ((bandGap - theoreticalBandGap) / theoreticalBandGap) * 100;
+    const percentError = Math.abs(((theoreticalBandGap - bandGap) / theoreticalBandGap) * 100);
     document.getElementById("percentError").innerText = `Percent Error: ${percentError.toFixed(2)} %`;
 
     createGraph(logIsValues);
