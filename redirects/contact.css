@@ -22,11 +22,11 @@ form {
     text-align: center;
     opacity: 0;
     animation: fadeIn 1s forwards;
-    transition: background-color 0.3s; /* Add transition for a smooth effect */
+    transition: background-color 0.3s; 
 }
 
 form:hover {
-    background-color: rgba(212, 235, 58, 0.8); /* Adjust the alpha value for the hover state */
+    background-color: rgba(212, 235, 58, 0.8);
 }
 
 @keyframes fadeIn {
