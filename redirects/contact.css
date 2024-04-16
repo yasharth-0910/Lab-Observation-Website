@@ -13,7 +13,7 @@ body {
 }
 
 form {
-    background-color: rgba(225, 255, 174, 0.489); /* Set the alpha value as needed */
+    background-color: rgba(225, 255, 174, 0.489);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
