@@ -46,7 +46,7 @@ function plotGraph() {
    
     const ctx = document.getElementById('graph').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'scatter',
+        type: 'line',
         data: {
             datasets: [{
                 label: 'Current vs 1/d^2',
