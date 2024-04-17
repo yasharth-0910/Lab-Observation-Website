@@ -1,3 +1,25 @@
+window.onload = function() {
+    loadSavedValues();
+};
+
+function loadSavedValues() {
+    for (let i = 348; i >= 303; i -= 5) {
+        const currentValue = document.getElementById("current" + i);
+        const savedValue = localStorage.getItem("current" + i);
+        if (savedValue !== null) {
+            currentValue.value = savedValue;
+        }
+    }
+}
+
+function saveValues() {
+    for (let i = 348; i >= 303; i -= 5) {
+        const currentValue = document.getElementById("current" + i);
+        localStorage.setItem("current" + i, currentValue.value);
+    }
+}
+
+
 function calculateBandGap() {
     const currentValues = [];
     const logIsValues = [];
