@@ -25,3 +25,6 @@
     <li>Automatic graph plotter if that experiment contain graph, an graph will be plotted and showed once you click on get result button</li>
     <li>You can also get prinout of entire graph, which you can paste on practical file, saving TON of your time</li>
 </ul>
+
+<h2>Connect with me </h2>
+<a href="https://linktr.ee/Singh_Yasharth" target= "_blank">Connect with me</a>
