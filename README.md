@@ -14,3 +14,14 @@
     <li>Experiment 3: To meansure Numerical Aperture of an Optical Fiber</li>
     <li>Experiment 4: To study Photovoltaic cell and hence verify Inverse sqaure law</li>
 </ul>
+
+
+<h2>Features</h2>
+
+<ul>
+    <li>Concept, procedure of experiments</li>
+    <li>A single click to get your observations result</li>
+    <li>Error shower, you can see %error you are getting </li>
+    <li>Automatic graph plotter if that experiment contain graph, an graph will be plotted and showed once you click on get result button</li>
+    <li>You can also get prinout of entire graph, which you can paste on practical file, saving TON of your time</li>
+</ul>
