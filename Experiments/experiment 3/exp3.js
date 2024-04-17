@@ -1,6 +1,5 @@
-// exp3.js
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to calculate numerical aperture
+    
     function calculateNumericalAperture(diameter, length) {
         const D = diameter;
         const d = length;
