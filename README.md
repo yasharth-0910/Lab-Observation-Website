@@ -1,6 +1,6 @@
-<h1>Lab-Observation-Website</h1>
+<h1>Lazy Lab</h1>
 
-<p>The following website is made by me to solve a big issue of our University student, because we are just too much lazy, and that is a website in which you just enter your lab observation's and you get everything from results too error and what not even graph which u can take print out of</p>
+<p>Do you find yourself drowning in lab reports, struggling to organize your observations, or simply battling the procrastination bug? Look no further! We are here to revolutionize the way JIIT'ians handle their laboratory work, making the tedious process effortless and efficient.</p>
 
 <h2>How to use</h2>
 <p>Just click on the experiment you want to do and enter the observation's and you will get everything</p>
