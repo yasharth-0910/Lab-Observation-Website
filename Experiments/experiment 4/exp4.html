@@ -6,8 +6,81 @@
     <title>Experiment 4</title>
     <link rel="icon" href="assests\einstien.png" type="icon">
     <link rel="stylesheet" href="exp4.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="exp4.js"></script>
 </head>
 <body>
-    
+    <h1>Experiment 4</h1>
+    <form id="dataForm">
+        <label for="distance1">Distance 1 (mm):</label>
+        <input type="number" id="distance1" required step="0.01"><br><br>
+
+        <label for="current1">Current 1 (μA):</label>
+        <input type="number" id="current1" required step="0.01"><br><br>
+
+        <label for="distance2">Distance 2 (mm):</label>
+        <input type="number" id="distance2" required step="0.01"><br><br>
+
+        <label for="current2">Current 2 (μA):</label>
+        <input type="number" id="current2" required step="0.01"><br><br>
+
+        <label for="distance3">Distance 3 (mm):</label>
+        <input type="number" id="distance3" required step="0.01"><br><br>
+
+        <label for="current3">Current 3 (μA):</label>
+        <input type="number" id="current3" required step="0.01"><br><br>
+
+        <label for="distance4">Distance 4 (mm):</label>
+        <input type="number" id="distance4" required step="0.01"><br><br>
+
+        <label for="current4">Current 4 (μA):</label>
+        <input type="number" id="current4" required step="0.01"><br><br>
+
+        <label for="distance5">Distance 5 (mm):</label>
+        <input type="number" id="distance5" required step="0.01"><br><br>
+
+        <label for="current5">Current 5 (μA):</label>
+        <input type="number" id="current5" required step="0.01"><br><br>
+
+        <label for="distance6">Distance 6 (mm):</label>
+        <input type="number" id="distance6" required step="0.01"><br><br>
+
+        <label for="current6">Current 6 (μA):</label>
+        <input type="number" id="current6" required step="0.01"><br><br>
+
+        <label for="distance7">Distance 7 (mm):</label>
+        <input type="number" id="distance7" required step="0.01"><br><br>
+
+        <label for="current7">Current 7 (μA):</label>
+        <input type="number" id="current7" required step="0.01"><br><br>
+
+        <label for="distance8">Distance 8 (mm):</label>
+        <input type="number" id="distance8" required step="0.01"><br><br>
+
+        <label for="current8">Current 8 (μA):</label>
+        <input type="number" id="current8" required step="0.01"><br><br>
+
+        <label for="distance9">Distance 9 (mm):</label>
+        <input type="number" id="distance9" required step="0.01"><br><br>
+
+        <label for="current9">Current 9 (μA):</label>
+        <input type="number" id="current9" required step="0.01"><br><br>
+
+        <label for="distance10">Distance 10 (mm):</label>
+        <input type="number" id="distance10" required step="0.01"><br><br>
+
+        <label for="current10">Current 10 (μA):</label>
+        <input type="number" id="current10" required step="0.01"><br><br>
+
+        <button type="button" onclick="plotGraph()">Plot Graph</button>
+        <button type="button" onclick="printGraph()">Print Graph</button>
+    </form>
+    <canvas id="graph" width="400" height="400"></canvas>
+    <div id="slopeDisplay"></div>
+
+    <script>
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

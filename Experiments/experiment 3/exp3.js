@@ -8,17 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
         return numericalAperture;
     }
 
-    // Define diameters
     const diameters = [4, 8, 12, 16, 20];
     let count = 0;
     let totalNumericalAperture = 0;
 
-    // Function to validate floating-point numbers
+    
     function isValidFloat(value) {
         return /^-?\d*\.?\d+$/.test(value);
     }
 
-    // Function to handle form submission
+   
     const form = document.getElementById("input-form");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -42,11 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             resultsBody.appendChild(newRow);
 
-            // Update total numerical aperture and count
+            
             totalNumericalAperture += numericalAperture;
             count++;
 
-            // If 5 values have been entered, calculate and display the average numerical aperture
+           
             if (count === 5) {
                 const averageNumericalAperture = totalNumericalAperture / 5;
                 const averageRow = document.createElement("tr");
@@ -61,6 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Optical Fiber Animation
+    
    
 });
