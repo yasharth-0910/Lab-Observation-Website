@@ -1,4 +1,4 @@
-# LazyLab: Your Ultimate Lab Observation Solution for JIIT'ians
+# LazyLab: Your Lab Observation Solution for JIIT'ians
 
 Do you find yourself drowning in lab reports, struggling to organize your observations, or simply battling the procrastination bug? Look no further! LazyLab is here to revolutionize the way JIIT'ians handle their laboratory work, making the tedious process effortless and efficient.
 
