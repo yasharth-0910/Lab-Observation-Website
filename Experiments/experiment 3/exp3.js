@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 resultsBody.appendChild(averageRow);
             }
         } else {
-            alert("Invalid diameter. Please select a diameter from the predefined list.");
+            alert("Invalid diameter. Please select a diameter from the predefined list that is 4,8,12,16,20mm.");
         }
     });
 
