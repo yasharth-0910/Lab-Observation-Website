@@ -72,7 +72,7 @@ body {
 
 .btn{
     text-decoration: none;
-    color: chartreuse;
+    color:rgb(127, 109, 122) ;
 }
 
 .btn:hover{
@@ -83,3 +83,9 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.n:hover{
+    color: chartreuse;
+    transform: translateY(-5px);
+}
+

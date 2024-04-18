@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(data => {
-            // Handle the response data as needed
+            
             console.log('Formspree response:', data);
             alert('Form submitted successfully!');
         })
