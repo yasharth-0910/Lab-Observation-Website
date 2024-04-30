@@ -85,21 +85,22 @@
             const hNet = (redH + yellowH + greenH + blueH) / 4;
 
             
-            const hNetError = Math.abs((correctH - hNet) / correctH * 100);
+            const hNetError = Math.abs((correctH - hNet) * 100 / hNet);
 
             
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = `
                 <p>Energy (E) and Planck's constant (h) for each color:</p>
                 <ul>
-                    <li>Red: E = ${redE.toExponential(2)} J, h = ${redH.toExponential(2)} Js</li>
-                    <li>Yellow: E = ${yellowE.toExponential(2)} J, h = ${yellowH.toExponential(2)} Js</li>
-                    <li>Green: E = ${greenE.toExponential(2)} J, h = ${greenH.toExponential(2)} Js</li>
-                    <li>Blue: E = ${blueE.toExponential(2)} J, h = ${blueH.toExponential(2)} Js</li>
+                    <li>Red: E = ${redE.toExponential(2)} J, h = ${redH.toExponential(2)} x 10^-34 Js</li>
+                    <li>Yellow: E = ${yellowE.toExponential(2)} J, h = ${yellowH.toExponential(2)} x 10^-34 Js</li>
+                    <li>Green: E = ${greenE.toExponential(2)} J, h = ${greenH.toExponential(2)} x 10^-34 Js</li>
+                    <li>Blue: E = ${blueE.toExponential(2)} J, h = ${blueH.toExponential(2)} x 10^-34 Js</li>
                 </ul>
-                <p>Net Planck's constant (h_net): ${hNet.toExponential(2)} Js, Error = ${hNetError.toFixed(2)}%</p>
+                <p>Net Planck's constant (h_net): ${hNet.toExponential(2)} x 10^-34 Js, Error = ${hNetError.toFixed(2)}%</p>
             `;
         }
     </script>
 </body>
 </html>
+            
